@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { mailtoHref, githubHref, xHref, linkedinHref, externalAttrs } from '../socialLinks';
 
 const Home = () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -183,9 +184,9 @@ const Home = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-5 z-10">
-            <a href="#" target="_blank" rel="noreferrer" className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" target="_blank" rel="noreferrer" className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-x-twitter"></i></a>
-            <a href="#" target="_blank" rel="noreferrer" className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-github"></i></a>
+            <a href={linkedinHref || undefined} {...externalAttrs(linkedinHref)} className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-linkedin-in"></i></a>
+            <a href={xHref || undefined} {...externalAttrs(xHref)} className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-x-twitter"></i></a>
+            <a href={githubHref || undefined} {...externalAttrs(githubHref)} className="text-white hover:text-[#9B2C2C] transition text-xl"><i className="fab fa-github"></i></a>
           </div>
 
           <button id="menu-toggle" className="md:hidden text-white text-2xl focus:outline-none hover:text-[#9B2C2C] transition z-10">
@@ -202,9 +203,9 @@ const Home = () => {
         <a href="#projects" className="nav-link text-white text-lg">Projects</a>
         <a href="#reachme" className="nav-link text-white text-lg">Reach Me</a>
         <div className="flex gap-5 justify-center mt-6 pt-4 border-t border-white/20">
-          <a href="#" className="text-white text-xl"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#" className="text-white text-xl"><i className="fab fa-x-twitter"></i></a>
-          <a href="#" className="text-white text-xl"><i className="fab fa-github"></i></a>
+          <a href={linkedinHref || undefined} {...externalAttrs(linkedinHref)} className="text-white text-xl"><i className="fab fa-linkedin-in"></i></a>
+          <a href={xHref || undefined} {...externalAttrs(xHref)} className="text-white text-xl"><i className="fab fa-x-twitter"></i></a>
+          <a href={githubHref || undefined} {...externalAttrs(githubHref)} className="text-white text-xl"><i className="fab fa-github"></i></a>
         </div>
       </div>
 
@@ -309,10 +310,10 @@ const Home = () => {
               <i className="fas fa-paper-plane"></i> Reach Me
             </a>
             <div className="flex flex-wrap justify-center gap-6">
-              <div className="tooltip-icon"><a href="mailto:mdmuzammil5457@gmail.com" className="social-circle"><i className="fas fa-envelope"></i></a><span className="tooltip-text">Email</span></div>
-              <div className="tooltip-icon"><a href="#" className="social-circle"><i className="fab fa-github"></i></a><span className="tooltip-text">GitHub</span></div>
-              <div className="tooltip-icon"><a href="#" className="social-circle"><i className="fab fa-linkedin-in"></i></a><span className="tooltip-text">LinkedIn</span></div>
-              <div className="tooltip-icon"><a href="#" className="social-circle"><i className="fab fa-x-twitter"></i></a><span className="tooltip-text">Twitter/X</span></div>
+              <div className="tooltip-icon"><a href={mailtoHref} className="social-circle"><i className="fas fa-envelope"></i></a><span className="tooltip-text">Email</span></div>
+              <div className="tooltip-icon"><a href={githubHref || undefined} {...externalAttrs(githubHref)} className="social-circle"><i className="fab fa-github"></i></a><span className="tooltip-text">GitHub</span></div>
+              <div className="tooltip-icon"><a href={linkedinHref || undefined} {...externalAttrs(linkedinHref)} className="social-circle"><i className="fab fa-linkedin-in"></i></a><span className="tooltip-text">LinkedIn</span></div>
+              <div className="tooltip-icon"><a href={xHref || undefined} {...externalAttrs(xHref)} className="social-circle"><i className="fab fa-x-twitter"></i></a><span className="tooltip-text">Twitter/X</span></div>
             </div>
           </div>
         </section>
@@ -334,10 +335,10 @@ const Home = () => {
               <a href="#reachme" className="footer-nav-link text-gray-400 hover:text-[#9B2C2C] transition">Contact</a>
             </div>
             <div className="flex gap-4 ml-0 md:ml-4 border-l-0 md:border-l border-white/20 md:pl-5">
-              <a href="mailto:mdmuzammil5457@gmail.com" className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fas fa-envelope"></i></a>
-              <a href="#" className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-github"></i></a>
-              <a href="#" className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-x-twitter"></i></a>
+              <a href={mailtoHref} className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fas fa-envelope"></i></a>
+              <a href={githubHref || undefined} {...externalAttrs(githubHref)} className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-github"></i></a>
+              <a href={linkedinHref || undefined} {...externalAttrs(linkedinHref)} className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-linkedin-in"></i></a>
+              <a href={xHref || undefined} {...externalAttrs(xHref)} className="text-gray-400 hover:text-[#9B2C2C] text-xl transition"><i className="fab fa-x-twitter"></i></a>
             </div>
           </div>
 
